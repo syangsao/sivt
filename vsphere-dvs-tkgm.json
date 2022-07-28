@@ -1,0 +1,252 @@
+{
+    "envSpec": {
+        "vcenterDetails": {
+            "vcenterAddress": "vcenter01.syangsao.lab",
+            "vcenterSsoUser": "Administrator@vsphere.local",
+            "vcenterSsoPasswordBase64": "TWF5YTIwMTEh",
+            "vcenterDatacenter": "Datacenter",
+            "vcenterCluster": "MSP",
+            "vcenterDatastore": "QNAP_LUN_1",
+            "contentLibraryName": "",
+            "aviOvaName": "",
+            "resourcePoolName": ""
+        },
+        "envType": "tkgm",
+        "marketplaceSpec": {
+            "refreshToken": "ez0_4r0pf8SLmEKfc_tc3ngFCTVJY2AmfXz2MoaJlqrdiB31fGqvZHLAsBR3j0kJ"
+        },
+        "ceipParticipation": "false",
+        "customRepositorySpec": {
+            "tkgCustomImageRepository": "",
+            "tkgCustomImageRepositoryPublicCaCert": ""
+        },
+        "saasEndpoints": {
+            "tmcDetails": {
+                "tmcAvailability": "false",
+                "tmcRefreshToken": "",
+                "tmcInstanceURL": ""
+            },
+            "tanzuObservabilityDetails": {
+                "tanzuObservabilityAvailability": "false",
+                "tanzuObservabilityUrl": "",
+                "tanzuObservabilityRefreshToken": ""
+            }
+        },
+        "infraComponents": {
+            "dnsServersIp": "192.168.40.2",
+            "ntpServers": "132.163.97.1",
+            "searchDomains": "syangsao.lab"
+        },
+        "proxySpec": {
+            "arcasVm": {
+                "enableProxy": "false",
+                "httpProxy": "",
+                "httpsProxy": "",
+                "noProxy": "",
+                "proxyCert": ""
+            },
+            "tkgMgmt": {
+                "enableProxy": "false",
+                "httpProxy": "",
+                "httpsProxy": "",
+                "noProxy": "",
+                "proxyCert": ""
+            },
+            "tkgSharedservice": {
+                "enableProxy": "false",
+                "httpProxy": "",
+                "httpsProxy": "",
+                "noProxy": "",
+                "proxyCert": ""
+            },
+            "tkgWorkload": {
+                "enableProxy": "false",
+                "httpProxy": "",
+                "httpsProxy": "",
+                "noProxy": "",
+                "proxyCert": ""
+            }
+        }
+    },
+    "tkgComponentSpec": {
+        "aviMgmtNetwork": {
+            "aviMgmtNetworkName": "nsx_alb_management_pg",
+            "aviMgmtNetworkGatewayCidr": "192.168.43.1/24",
+            "aviMgmtServiceIpStartRange": "192.168.43.100",
+            "aviMgmtServiceIpEndRange": "192.168.43.200"
+        },
+        "tkgClusterVipNetwork": {
+            "tkgClusterVipNetworkName": "tkg_mgmt_vip_pg",
+            "tkgClusterVipNetworkGatewayCidr": "192.168.46.1/24",
+            "tkgClusterVipIpStartRange": "192.168.46.100",
+            "tkgClusterVipIpEndRange": "192.168.46.200"
+        },
+        "aviComponents": {
+            "aviPasswordBase64": "TWF5YTIwMTEh",
+            "aviBackupPassphraseBase64": "TWF5YTIwMTEh",
+            "enableAviHa": "false",
+            "aviController01Ip": "192.168.43.10",
+            "aviController01Fqdn": "avi.syangsao.lab",
+            "aviController02Ip": "",
+            "aviController02Fqdn": "",
+            "aviController03Ip": "",
+            "aviController03Fqdn": "",
+            "aviClusterIp": "",
+            "aviClusterFqdn": "",
+            "aviSize": "small",
+            "aviCertPath": "",
+            "aviCertKeyPath": ""
+        },
+        "identityManagementSpec": {
+            "identityManagementType": "",
+            "oidcSpec": {
+                "oidcIssuerUrl": "",
+                "oidcClientId": "",
+                "oidcClientSecret": "",
+                "oidcScopes": "",
+                "oidcUsernameClaim": "",
+                "oidcGroupsClaim": ""
+            },
+            "ldapSpec": {
+                "ldapEndpointIp": "",
+                "ldapEndpointPort": "",
+                "ldapBindPWBase64": "",
+                "ldapBindDN": "",
+                "ldapUserSearchBaseDN": "",
+                "ldapUserSearchFilter": "",
+                "ldapUserSearchUsername": "",
+                "ldapGroupSearchBaseDN": "",
+                "ldapGroupSearchFilter": "",
+                "ldapGroupSearchUserAttr": "",
+                "ldapGroupSearchGroupAttr": "",
+                "ldapGroupSearchNameAttr": "",
+                "ldapRootCAData": ""
+            }
+        },
+        "tkgMgmtComponents": {
+            "tkgMgmtNetworkName": "tkg_mgmt_pg",
+            "tkgMgmtGatewayCidr": "192.168.44.1/24",
+            "tkgMgmtClusterName": "syangsao-mgmt",
+            "tkgMgmtSize": "medium",
+            "tkgMgmtCpuSize": "",
+            "tkgMgmtMemorySize": "",
+            "tkgMgmtStorageSize": "",
+            "tkgMgmtDeploymentType": "dev",
+            "tkgMgmtClusterCidr": "100.96.0.0/11",
+            "tkgMgmtServiceCidr": "100.64.0.0/13",
+            "tkgMgmtBaseOs": "photon",
+            "tkgMgmtRbacUserRoleSpec": {
+                "clusterAdminUsers": "",
+                "adminUsers": "",
+                "editUsers": "",
+                "viewUsers": ""
+            },
+            "tkgMgmtClusterGroupName": "",
+            "tkgSharedserviceClusterName": "syangsao-shared",
+            "tkgSharedserviceSize": "small",
+            "tkgSharedserviceCpuSize": "",
+            "tkgSharedserviceMemorySize": "",
+            "tkgSharedserviceStorageSize": "",
+            "tkgSharedserviceDeploymentType": "prod",
+            "tkgSharedserviceWorkerMachineCount": "3",
+            "tkgSharedserviceClusterCidr": "100.96.0.0/11",
+            "tkgSharedserviceServiceCidr": "100.64.0.0/13",
+            "tkgSharedserviceBaseOs": "photon",
+            "tkgSharedserviceKubeVersion": "v1.22.9",
+            "tkgSharedserviceRbacUserRoleSpec": {
+                "clusterAdminUsers": "",
+                "adminUsers": "",
+                "editUsers": "",
+                "viewUsers": ""
+            },
+            "tkgSharedserviceClusterGroupName": "",
+            "tkgSharedserviceEnableDataProtection": "false",
+            "tkgSharedClusterCredential": "",
+            "tkgSharedClusterBackupLocation": ""
+        }
+    },
+    "tkgMgmtDataNetwork": {
+        "tkgMgmtDataNetworkName": "tkg_mgmt_vip_pg",
+        "tkgMgmtDataNetworkGatewayCidr": "192.168.45.1/24",
+        "tkgMgmtAviServiceIpStartRange": "192.168.45.100",
+        "tkgMgmtAviServiceIpEndRange": "192.168.45.200"
+    },
+    "tkgWorkloadDataNetwork": {
+        "tkgWorkloadDataNetworkName": "tkg_workload_vip_pg",
+        "tkgWorkloadDataNetworkGatewayCidr": "192.168.47.1/24",
+        "tkgWorkloadAviServiceIpStartRange": "192.168.47.100",
+        "tkgWorkloadAviServiceIpEndRange": "192.168.47.200"
+    },
+    "tkgWorkloadComponents": {
+        "tkgWorkloadNetworkName": "tkg_workload_pg",
+        "tkgWorkloadGatewayCidr": "192.168.48.1/24",
+        "tkgWorkloadClusterName": "syangsao-workload",
+        "tkgWorkloadSize": "medium",
+        "tkgWorkloadCpuSize": "",
+        "tkgWorkloadMemorySize": "",
+        "tkgWorkloadStorageSize": "",
+        "tkgWorkloadDeploymentType": "dev",
+        "tkgWorkloadWorkerMachineCount": "1",
+        "tkgWorkloadClusterCidr": "100.96.0.0/11",
+        "tkgWorkloadServiceCidr": "100.64.0.0/13",
+        "tkgWorkloadBaseOs": "photon",
+        "tkgWorkloadKubeVersion": "v1.22.9",
+        "tkgWorkloadRbacUserRoleSpec": {
+            "clusterAdminUsers": "",
+            "adminUsers": "",
+            "editUsers": "",
+            "viewUsers": ""
+        },
+        "tkgWorkloadTsmIntegration": "false",
+        "namespaceExclusions": {
+            "exactName": "",
+            "startsWith": ""
+        },
+        "tkgWorkloadClusterGroupName": "",
+        "tkgWorkloadEnableDataProtection": "false",
+        "tkgWorkloadClusterCredential": "",
+        "tkgWorkloadClusterBackupLocation": ""
+    },
+    "harborSpec": {
+        "enableHarborExtension": "true",
+        "harborFqdn": "harbor.syangsao.lab",
+        "harborPasswordBase64": "cGFzc3dvcmQ=",
+        "harborCertPath": "",
+        "harborCertKeyPath": ""
+    },
+    "tanzuExtensions": {
+        "enableExtensions": "false",
+        "tkgClustersName": "",
+        "logging": {
+            "syslogEndpoint": {
+                "enableSyslogEndpoint": "false",
+                "syslogEndpointAddress": "",
+                "syslogEndpointPort": "",
+                "syslogEndpointMode": "",
+                "syslogEndpointFormat": ""
+            },
+            "httpEndpoint": {
+                "enableHttpEndpoint": "false",
+                "httpEndpointAddress": "",
+                "httpEndpointPort": "",
+                "httpEndpointUri": "",
+                "httpEndpointHeaderKeyValue": ""
+            },
+            "kafkaEndpoint": {
+                "enableKafkaEndpoint": "false",
+                "kafkaBrokerServiceName": "",
+                "kafkaTopicName": ""
+            }
+        },
+        "monitoring": {
+            "enableLoggingExtension": "false",
+            "prometheusFqdn": "",
+            "prometheusCertPath": "",
+            "prometheusCertKeyPath": "",
+            "grafanaFqdn": "",
+            "grafanaCertPath": "",
+            "grafanaCertKeyPath": "",
+            "grafanaPasswordBase64": ""
+        }
+    }
+}
